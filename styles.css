@@ -1,0 +1,44 @@
+:root {
+  --form-field-font-family: Verdana, Geneva, Tahoma, sans-serif;
+  --form-field-font-size: 1rem;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-family: var(--form-field-font-family);
+  background-color: rgb(243, 248, 250);
+}
+
+.radios {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* children of that div */
+/* .radios > * {
+  margin: 0 1rem;
+} */
+
+.card {
+  transition: all 0.2s;
+  background-color: rgb(216, 226, 231);
+  box-shadow: 0 0 5px 1px rgb(202, 211, 216);
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.card:hover {
+  transition: all 0.2s;
+  transform: scale(1.02);
+}
+
+.card h3 {
+  margin: 0.1rem;
+}
+
+.card p {
+  font-size: 0.8rem;
+  margin: 0.1rem;
+}
