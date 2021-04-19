@@ -10,7 +10,7 @@ class Product
     private $productVendor;
     private $productDescription;
 
-    public static $rowsPerPage = 10;
+    public static $rowsPerPage = 8;
 
     public function __construct()
     {
@@ -233,7 +233,7 @@ class Product
         }
 
         //calculate the rows per page
-        $startRows = ($pageNum - 1) * 5;
+        $startRows = ($pageNum - 1) * Product::$rowsPerPage;
         $totalRowsPerPage = Product::$rowsPerPage;
         $sql .= " limit $startRows,$totalRowsPerPage";
 
@@ -260,8 +260,6 @@ class Product
     {
         $conn = Database::getInstance();
         $mysqli = $conn->getConnection();
-
-        $sql = "SELECT FOUND_ROWS();";
 
         $result = $mysqli->query("SELECT FOUND_ROWS();");
 

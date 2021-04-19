@@ -69,7 +69,7 @@ $results = null;
     }
 
     if (!isset($_GET["submit"])) {
-        $results = Product::getAll();
+        $results = Product::advancedSearch();
         if ($results != false) {
             foreach ($results as $row) {
             ?>
